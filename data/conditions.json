@@ -1,0 +1,27 @@
+[
+  {
+    "value": "Any",
+    "text": "Any Condition",
+    "selected": true
+  },
+  {
+    "value": "antique",
+    "text": "Antique",
+    "selected": false
+  },
+  {
+    "value": "brand-new",
+    "text": "Brand New",
+    "selected": false
+  },
+  {
+    "value": "registered",
+    "text": "Registered",
+    "selected": false
+  },
+  {
+    "value": "unregistered",
+    "text": "Unregistered",
+    "selected": false
+  }
+]

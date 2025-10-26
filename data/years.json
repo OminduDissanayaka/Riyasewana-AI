@@ -1,0 +1,486 @@
+{
+  "min": [
+    {
+      "value": "",
+      "text": "Year Min",
+      "selected": true
+    },
+    {
+      "value": "2025",
+      "text": "2025",
+      "selected": false
+    },
+    {
+      "value": "2024",
+      "text": "2024",
+      "selected": false
+    },
+    {
+      "value": "2023",
+      "text": "2023",
+      "selected": false
+    },
+    {
+      "value": "2022",
+      "text": "2022",
+      "selected": false
+    },
+    {
+      "value": "2021",
+      "text": "2021",
+      "selected": false
+    },
+    {
+      "value": "2020",
+      "text": "2020",
+      "selected": false
+    },
+    {
+      "value": "2019",
+      "text": "2019",
+      "selected": false
+    },
+    {
+      "value": "2018",
+      "text": "2018",
+      "selected": false
+    },
+    {
+      "value": "2017",
+      "text": "2017",
+      "selected": false
+    },
+    {
+      "value": "2016",
+      "text": "2016",
+      "selected": false
+    },
+    {
+      "value": "2015",
+      "text": "2015",
+      "selected": false
+    },
+    {
+      "value": "2014",
+      "text": "2014",
+      "selected": false
+    },
+    {
+      "value": "2013",
+      "text": "2013",
+      "selected": false
+    },
+    {
+      "value": "2012",
+      "text": "2012",
+      "selected": false
+    },
+    {
+      "value": "2011",
+      "text": "2011",
+      "selected": false
+    },
+    {
+      "value": "2010",
+      "text": "2010",
+      "selected": false
+    },
+    {
+      "value": "2009",
+      "text": "2009",
+      "selected": false
+    },
+    {
+      "value": "2008",
+      "text": "2008",
+      "selected": false
+    },
+    {
+      "value": "2007",
+      "text": "2007",
+      "selected": false
+    },
+    {
+      "value": "2006",
+      "text": "2006",
+      "selected": false
+    },
+    {
+      "value": "2005",
+      "text": "2005",
+      "selected": false
+    },
+    {
+      "value": "2004",
+      "text": "2004",
+      "selected": false
+    },
+    {
+      "value": "2003",
+      "text": "2003",
+      "selected": false
+    },
+    {
+      "value": "2002",
+      "text": "2002",
+      "selected": false
+    },
+    {
+      "value": "2001",
+      "text": "2001",
+      "selected": false
+    },
+    {
+      "value": "2000",
+      "text": "2000",
+      "selected": false
+    },
+    {
+      "value": "1999",
+      "text": "1999",
+      "selected": false
+    },
+    {
+      "value": "1998",
+      "text": "1998",
+      "selected": false
+    },
+    {
+      "value": "1997",
+      "text": "1997",
+      "selected": false
+    },
+    {
+      "value": "1996",
+      "text": "1996",
+      "selected": false
+    },
+    {
+      "value": "1995",
+      "text": "1995",
+      "selected": false
+    },
+    {
+      "value": "1994",
+      "text": "1994",
+      "selected": false
+    },
+    {
+      "value": "1993",
+      "text": "1993",
+      "selected": false
+    },
+    {
+      "value": "1992",
+      "text": "1992",
+      "selected": false
+    },
+    {
+      "value": "1991",
+      "text": "1991",
+      "selected": false
+    },
+    {
+      "value": "1990",
+      "text": "1990",
+      "selected": false
+    },
+    {
+      "value": "1989",
+      "text": "1989",
+      "selected": false
+    },
+    {
+      "value": "1988",
+      "text": "1988",
+      "selected": false
+    },
+    {
+      "value": "1987",
+      "text": "1987",
+      "selected": false
+    },
+    {
+      "value": "1986",
+      "text": "1986",
+      "selected": false
+    },
+    {
+      "value": "1985",
+      "text": "1985",
+      "selected": false
+    },
+    {
+      "value": "1984",
+      "text": "1984",
+      "selected": false
+    },
+    {
+      "value": "1983",
+      "text": "1983",
+      "selected": false
+    },
+    {
+      "value": "1982",
+      "text": "1982",
+      "selected": false
+    },
+    {
+      "value": "1981",
+      "text": "1981",
+      "selected": false
+    },
+    {
+      "value": "1980",
+      "text": "1980",
+      "selected": false
+    },
+    {
+      "value": "old",
+      "text": "< 1979",
+      "selected": false
+    }
+  ],
+  "max": [
+    {
+      "value": "",
+      "text": "Year Max",
+      "selected": true
+    },
+    {
+      "value": "2025",
+      "text": "2025",
+      "selected": false
+    },
+    {
+      "value": "2024",
+      "text": "2024",
+      "selected": false
+    },
+    {
+      "value": "2023",
+      "text": "2023",
+      "selected": false
+    },
+    {
+      "value": "2022",
+      "text": "2022",
+      "selected": false
+    },
+    {
+      "value": "2021",
+      "text": "2021",
+      "selected": false
+    },
+    {
+      "value": "2020",
+      "text": "2020",
+      "selected": false
+    },
+    {
+      "value": "2019",
+      "text": "2019",
+      "selected": false
+    },
+    {
+      "value": "2018",
+      "text": "2018",
+      "selected": false
+    },
+    {
+      "value": "2017",
+      "text": "2017",
+      "selected": false
+    },
+    {
+      "value": "2016",
+      "text": "2016",
+      "selected": false
+    },
+    {
+      "value": "2015",
+      "text": "2015",
+      "selected": false
+    },
+    {
+      "value": "2014",
+      "text": "2014",
+      "selected": false
+    },
+    {
+      "value": "2013",
+      "text": "2013",
+      "selected": false
+    },
+    {
+      "value": "2012",
+      "text": "2012",
+      "selected": false
+    },
+    {
+      "value": "2011",
+      "text": "2011",
+      "selected": false
+    },
+    {
+      "value": "2010",
+      "text": "2010",
+      "selected": false
+    },
+    {
+      "value": "2009",
+      "text": "2009",
+      "selected": false
+    },
+    {
+      "value": "2008",
+      "text": "2008",
+      "selected": false
+    },
+    {
+      "value": "2007",
+      "text": "2007",
+      "selected": false
+    },
+    {
+      "value": "2006",
+      "text": "2006",
+      "selected": false
+    },
+    {
+      "value": "2005",
+      "text": "2005",
+      "selected": false
+    },
+    {
+      "value": "2004",
+      "text": "2004",
+      "selected": false
+    },
+    {
+      "value": "2003",
+      "text": "2003",
+      "selected": false
+    },
+    {
+      "value": "2002",
+      "text": "2002",
+      "selected": false
+    },
+    {
+      "value": "2001",
+      "text": "2001",
+      "selected": false
+    },
+    {
+      "value": "2000",
+      "text": "2000",
+      "selected": false
+    },
+    {
+      "value": "1999",
+      "text": "1999",
+      "selected": false
+    },
+    {
+      "value": "1998",
+      "text": "1998",
+      "selected": false
+    },
+    {
+      "value": "1997",
+      "text": "1997",
+      "selected": false
+    },
+    {
+      "value": "1996",
+      "text": "1996",
+      "selected": false
+    },
+    {
+      "value": "1995",
+      "text": "1995",
+      "selected": false
+    },
+    {
+      "value": "1994",
+      "text": "1994",
+      "selected": false
+    },
+    {
+      "value": "1993",
+      "text": "1993",
+      "selected": false
+    },
+    {
+      "value": "1992",
+      "text": "1992",
+      "selected": false
+    },
+    {
+      "value": "1991",
+      "text": "1991",
+      "selected": false
+    },
+    {
+      "value": "1990",
+      "text": "1990",
+      "selected": false
+    },
+    {
+      "value": "1989",
+      "text": "1989",
+      "selected": false
+    },
+    {
+      "value": "1988",
+      "text": "1988",
+      "selected": false
+    },
+    {
+      "value": "1987",
+      "text": "1987",
+      "selected": false
+    },
+    {
+      "value": "1986",
+      "text": "1986",
+      "selected": false
+    },
+    {
+      "value": "1985",
+      "text": "1985",
+      "selected": false
+    },
+    {
+      "value": "1984",
+      "text": "1984",
+      "selected": false
+    },
+    {
+      "value": "1983",
+      "text": "1983",
+      "selected": false
+    },
+    {
+      "value": "1982",
+      "text": "1982",
+      "selected": false
+    },
+    {
+      "value": "1981",
+      "text": "1981",
+      "selected": false
+    },
+    {
+      "value": "1980",
+      "text": "1980",
+      "selected": false
+    },
+    {
+      "value": "old",
+      "text": "< 1979",
+      "selected": false
+    }
+  ]
+}

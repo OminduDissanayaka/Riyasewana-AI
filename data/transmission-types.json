@@ -1,0 +1,17 @@
+[
+  {
+    "value": "Any",
+    "text": "Any Gear",
+    "selected": true
+  },
+  {
+    "value": "Automatic",
+    "text": "Auto",
+    "selected": false
+  },
+  {
+    "value": "Manual",
+    "text": "Manual",
+    "selected": false
+  }
+]

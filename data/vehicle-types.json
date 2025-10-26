@@ -1,0 +1,72 @@
+[
+  {
+    "value": "Any",
+    "text": "Any Type",
+    "selected": true
+  },
+  {
+    "value": "cars",
+    "text": "Car",
+    "selected": false
+  },
+  {
+    "value": "vans",
+    "text": "Van",
+    "selected": false
+  },
+  {
+    "value": "suvs",
+    "text": "SUV / Jeep",
+    "selected": false
+  },
+  {
+    "value": "motorcycles",
+    "text": "Motorcycle",
+    "selected": false
+  },
+  {
+    "value": "crew-cabs",
+    "text": "Crew Cab",
+    "selected": false
+  },
+  {
+    "value": "pickups",
+    "text": "Pickup / Double Cab",
+    "selected": false
+  },
+  {
+    "value": "buses",
+    "text": "Bus",
+    "selected": false
+  },
+  {
+    "value": "lorries",
+    "text": "Lorry",
+    "selected": false
+  },
+  {
+    "value": "three-wheels",
+    "text": "Three Wheel",
+    "selected": false
+  },
+  {
+    "value": "others",
+    "text": "Other",
+    "selected": false
+  },
+  {
+    "value": "tractors",
+    "text": "Tractor",
+    "selected": false
+  },
+  {
+    "value": "heavy-duties",
+    "text": "Heavy-Duty",
+    "selected": false
+  },
+  {
+    "value": "bicycles",
+    "text": "Bicycle",
+    "selected": false
+  }
+]

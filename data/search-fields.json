@@ -1,0 +1,15 @@
+{
+  "models": {
+    "placeholder": "Model",
+    "hasInput": true
+  },
+  "price": {
+    "hasMinMax": true,
+    "minField": {
+      "placeholder": "Min Price "
+    },
+    "maxField": {
+      "placeholder": "Max Price "
+    }
+  }
+}

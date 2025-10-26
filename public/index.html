@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyasewana AI - වාහන සෙවුම් සහ නිර්දේශ | Omindu Dissanayaka</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Riyasewana AI helps you find the perfect vehicle in Sri Lanka with real-time recommendations, price analysis and detailed vehicle information in Sinhala.">
+    <meta name="keywords" content="riyasewana, vehicle search, car prices sri lanka, ai chatbot, vehicle recommendations, සිංහල">
+    <meta name="author" content="Omindu Dissanayaka">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Riyasewana AI - වාහන සෙවුම් සහ නිර්දේශ">
+    <meta property="og:description" content="Find your perfect vehicle with AI-powered recommendations and real-time market analysis">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://riyasewana-ai.omindu.dev">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Riyasewana AI - වාහන සෙවුම් සහ නිර්දේශ">
+    <meta name="twitter:description" content="AI-powered vehicle search and recommendations in Sinhala">
+    <meta name="twitter:image" content="img/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="manifest" href="img/logo.png">
+    <meta name="theme-color" content="#2196F3">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid #2196F3;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffffff, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            color: #e0e0e0;
+        }
+        
+        .chat-container {
+            display: flex;
+            height: 700px;
+        }
+        
+        .chat-sidebar {
+            width: 300px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-right: 2px solid #e0e0e0;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-sidebar h3 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .chat-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 85%;
+            position: relative;
+        }
+        
+        .user-message {
+            background: #2196F3;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+        }
+        
+        .ai-message {
+            background: #f5f5f5;
+            color: #1a1a1a;
+            margin-right: auto;
+            border-bottom-left-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .streaming-message {
+            border: 2px dashed #2196F3;
+            background: #f0f8ff;
+        }
+        
+        .message-status {
+            font-size: 0.8em;
+            opacity: 0.7;
+            margin-top: 5px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .typing-indicator {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: #f5f5f5;
+            border-radius: 15px;
+            color: #333;
+            font-style: italic;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .typing-dots {
+            display: inline-flex;
+            margin-left: 5px;
+        }
+        
+        .typing-dots span {
+            animation: typing 1.4s infinite;
+            margin: 0 1px;
+            color: #2196F3;
+        }
+        
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% { opacity: 0.3; }
+            30% { opacity: 1; }
+        }
+        
+        .vehicle-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            transition: all 0.3s;
+        }
+        
+        .vehicle-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+            border-color: #2196F3;
+        }
+        
+        .vehicle-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .vehicle-title {
+            color: #000;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .vehicle-price {
+            color: #2196F3;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        
+        .vehicle-details {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        
+        .vehicle-details i {
+            color: #2196F3;
+            margin-right: 5px;
+        }
+        
+        .vehicle-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .feature-tag {
+            background: #2196F3;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+        }
+        
+        .vehicle-link {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85em;
+            margin-top: 5px;
+            transition: background 0.3s;
+        }
+        
+        .vehicle-link:hover {
+            background: #2196F3;
+        }
+        
+        .vehicle-link i {
+            margin-right: 5px;
+        }
+        
+        .promoted-badge {
+            background: #2196F3;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            margin-left: 8px;
+        }
+        
+        .promoted-badge i {
+            margin-right: 3px;
+        }
+        
+        .recommendation-section {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .recommendation-section h3 i {
+            color: #2196F3;
+            margin-right: 8px;
+        }
+        
+        .search-summary {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #1a1a1a;
+        }
+        
+        .search-summary i {
+            color: #2196F3;
+            margin-right: 5px;
+        }
+        
+        .markdown-content {
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+        
+        .markdown-content img {
+            max-width: 100%;
+            max-height: fit-content;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .markdown-content h2 {
+            color: #000;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 5px;
+        }
+        
+        .markdown-content h3 {
+            color: #1a1a1a;
+            margin: 15px 0 8px 0;
+        }
+        
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .markdown-content li {
+            margin-bottom: 5px;
+        }
+        
+        .markdown-content li i {
+            color: #2196F3;
+            margin-right: 8px;
+        }
+        
+        .markdown-content strong {
+            color: #000;
+        }
+        
+        .markdown-content a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        
+        .markdown-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .chat-input {
+            padding: 20px;
+            background: #f5f5f5;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .input-group input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            background: white;
+        }
+        
+        .input-group input:focus {
+            border-color: #2196F3;
+        }
+        
+        .input-group button {
+            padding: 15px 30px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+        
+        .input-group button:hover:not(:disabled) {
+            background: #1976D2;
+        }
+        
+        .input-group button:disabled {
+            background: #9e9e9e;
+            cursor: not-allowed;
+        }
+        
+        .input-group button i {
+            margin-right: 5px;
+        }
+        
+        .examples {
+            margin-top: 20px;
+        }
+        
+        .example-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            color: #1a1a1a;
+        }
+        
+        .example-btn:hover {
+            background: #2196F3;
+            color: white;
+            border-color: #2196F3;
+        }
+        
+        .example-btn i {
+            margin-right: 8px;
+            color: #2196F3;
+        }
+        
+        .example-btn:hover i {
+            color: white;
+        }
+        
+        .history-section {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .history-section h4 {
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .history-section h4 i {
+            margin-right: 8px;
+            color: #2196F3;
+        }
+        
+        .history-btn {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .history-btn:hover {
+            background: #2196F3;
+        }
+        
+        .history-btn i {
+            margin-right: 8px;
+        }
+        
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            z-index: 1000;
+            font-weight: 600;
+        }
+        
+        .connection-status i {
+            margin-right: 5px;
+        }
+        
+        .connected {
+            background: #2196F3;
+            color: white;
+        }
+        
+        .disconnected {
+            background: #000;
+            color: white;
+        }
+        
+        .connecting {
+            background: #666;
+            color: white;
+        }
+        
+        .clear-history {
+            background: #000 !important;
+            border: 2px solid #2196F3 !important;
+        }
+        
+        .clear-history:hover {
+            background: #2196F3 !important;
+            border-color: #000 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status" id="connectionStatus">
+        <i class="fas fa-circle-notch fa-spin"></i>
+        <span id="statusText">Connecting...</span>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-car"></i> Riyasewana AI</h1>
+            <p>වාහන සෙවුම් සහ නිර්දේශ</p>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-sidebar">
+                <h3><i class="fas fa-lightbulb"></i> උදාහරණ ප්‍රශ්න</h3>
+                <div class="examples">
+                    <button class="example-btn" onclick="setExample(this)">
+                        <i class="fas fa-money-bill-wave"></i>
+                        මගේ මාසික වැටුප රු 50000 යි. මට ගෙවන්න ගන්න car එකක් ඕනේ
+                    </button>
+                    <button class="example-btn" onclick="setExample(this)">
+                        <i class="fas fa-search"></i>
+                        මට suzuki car එකක් ගන්න ඕනේ රු ලක්ෂ 20 ත් 25 අතර වෙන එකක්
+                    </button>
+                    <button class="example-btn" onclick="setExample(this)">
+                        <i class="fas fa-tag"></i>
+                        Toyota Premio 2015 කාර් එකක මිල කීයද?
+                    </button>
+                    <button class="example-btn" onclick="setExample(this)">
+                        <i class="fas fa-info-circle"></i>
+                        Honda Vezel hybrid එකක් ගැන තොරතුරු අවශ්‍යයි
+                    </button>
+                </div>
+                
+                <div class="history-section">
+                    <h4><i class="fas fa-history"></i> Chat History</h4>
+                    <button class="history-btn" onclick="loadChatHistory()">
+                        <i class="fas fa-download"></i> Load History
+                    </button>
+                    <button class="history-btn clear-history" onclick="clearChatHistory()">
+                        <i class="fas fa-trash-alt"></i> Clear History
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-main">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        <div class="markdown-content">
+                            <h2>සාදරයෙන් පිළිගනිමු!</h2>
+                            <p>මම Riyasewana AI chat සහායකය. මම ඔබට:</p>
+                            <ul>
+                                <li><i class="fas fa-search"></i> <strong>වාහන දත්ත</strong> - සැබෑ Riyasewana listings</li>
+                                <li><i class="fas fa-image"></i> <strong>වාහන ඡායාරූප</strong> - Images සමග නිර්දේශ</li>
+                                <li><i class="fas fa-lightbulb"></i> <strong>විස්තරාත්මක නිර්දේශ</strong> - සවිස්තරාත්මක විශ්ලේෂණය</li>
+                            <p>ඔබට අවශ්‍ය වාහනය ගැන මට කියන්න!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <div class="input-group">
+                        <input type="text" id="messageInput" placeholder="ඔබේ ප්‍රශ්නය ඇතුලත් කරන්න..." onkeypress="handleKeyPress(event)">
+                        <button id="sendButton" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i> යවන්න
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class EnhancedStreamChat {
+            constructor() {
+                this.eventSource = null;
+                this.clientId = null;
+                this.isConnected = false;
+                this.currentStreamMessage = null;
+                this.vehicles = [];
+                
+                this.initializeConnection();
+                this.loadStoredHistory();
+            }
+
+            initializeConnection() {
+                this.updateConnectionStatus('connecting', '<i class="fas fa-circle-notch fa-spin"></i> Connecting...');
+                
+                this.eventSource = new EventSource('/api/chat-stream');
+                
+                this.eventSource.onopen = (event) => {
+                    console.log('SSE Connection opened');
+                    this.updateConnectionStatus('connected', '<i class="fas fa-check-circle"></i> Connected');
+                    this.isConnected = true;
+                };
+
+                this.eventSource.onmessage = (event) => {
+                    try {
+                        const data = JSON.parse(event.data);
+                        this.handleStreamEvent(data);
+                    } catch (error) {
+                        console.error('Error parsing stream event:', error);
+                    }
+                };
+
+                this.eventSource.onerror = (event) => {
+                    console.error('SSE Connection error:', event);
+                    this.updateConnectionStatus('disconnected', '<i class="fas fa-times-circle"></i> Disconnected');
+                    this.isConnected = false;
+                    
+                    setTimeout(() => {
+                        if (!this.isConnected) {
+                            this.initializeConnection();
+                        }
+                    }, 3000);
+                };
+            }
+
+            handleStreamEvent(data) {
+                console.log('Stream event:', data);
+                
+                switch (data.type) {
+                    case 'connected':
+                        this.clientId = data.clientId;
+                        break;
+                        
+                    case 'typing_started':
+                        this.showTypingIndicator();
+                        break;
+                        
+                    case 'message_received':
+                        this.addMessage(data.message, 'user');
+                        break;
+                        
+                    case 'analysis_started':
+                        this.updateStreamMessage('<i class="fas fa-search"></i> ඔබගේ ඉල්ලීම විශ්ලේෂණය කරමින්...');
+                        break;
+                        
+                    case 'search_started':
+                        this.updateStreamMessage(`<i class="fas fa-rocket"></i> ${data.analysis.searchParams.make || 'වාහන'} සෙවුම ආරම්භ කරමින්...`);
+                        break;
+                        
+                    case 'search_completed':
+                        this.updateStreamMessage(`<i class="fas fa-check"></i> වාහන ${data.resultsCount} ක් හමු විය! (විස්තර ${data.detailedCount} ක්)`);
+                        break;
+                        
+                    case 'vehicle_detail':
+                        this.addVehicleCard(data.vehicle, data.index, data.total);
+                        break;
+                        
+                    case 'recommendation_started':
+                        this.startRecommendationStream();
+                        break;
+                        
+                    case 'recommendation_summary':
+                        this.showSearchSummary(data.summary);
+                        break;
+                        
+                    case 'recommendation_chunk':
+                        this.updateRecommendationStream(data.text, data.isComplete);
+                        break;
+                        
+                    case 'response_started':
+                        this.startResponseStream();
+                        break;
+                        
+                    case 'response_chunk':
+                        this.updateResponseStream(data.text, data.isComplete);
+                        break;
+                        
+                    case 'complete':
+                        this.completeStream();
+                        break;
+                        
+                    case 'error':
+                        this.showError(data.error);
+                        break;
+                }
+            }
+
+            showTypingIndicator() {
+                this.removeTypingIndicator();
+                
+                const messagesContainer = document.getElementById('chatMessages');
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'message ai-message';
+                typingDiv.id = 'typing-indicator';
+                typingDiv.innerHTML = `
+                    <div class="typing-indicator">
+                        <i class="fas fa-keyboard"></i> ටයිප් කරමින් <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>
+                    </div>
+                `;
+                messagesContainer.appendChild(typingDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            removeTypingIndicator() {
+                const typingElement = document.getElementById('typing-indicator');
+                if (typingElement) {
+                    typingElement.remove();
+                }
+            }
+
+            updateStreamMessage(text) {
+                this.removeTypingIndicator();
+                
+                if (!this.currentStreamMessage) {
+                    this.currentStreamMessage = this.createStreamMessage();
+                }
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                contentDiv.innerHTML = `<div class="search-summary">${text}</div>`;
+            }
+
+            createStreamMessage() {
+                const messagesContainer = document.getElementById('chatMessages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message ai-message streaming-message';
+                messageDiv.innerHTML = `
+                    <div class="stream-content"></div>
+                    <div class="message-status"><i class="fas fa-sync fa-spin"></i> Real-time processing...</div>
+                `;
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                return messageDiv;
+            }
+
+            addVehicleCard(vehicle, index, total) {
+                if (!this.currentStreamMessage) {
+                    this.currentStreamMessage = this.createStreamMessage();
+                }
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                
+                const vehicleCard = document.createElement('div');
+                vehicleCard.className = 'vehicle-card';
+                vehicleCard.innerHTML = `
+                    ${vehicle.image ? `<img src="${vehicle.image}" alt="${vehicle.title}" class="vehicle-image" onerror="this.style.display='none'">` : ''}
+                    <div class="vehicle-title">
+                        ${vehicle.title} 
+                        ${vehicle.isPromoted ? '<span class="promoted-badge"><i class="fas fa-star"></i> Promoted</span>' : ''}
+                    </div>
+                    <div class="vehicle-price">${vehicle.price}</div>
+                    <div class="vehicle-details">
+                        <i class="fas fa-map-marker-alt"></i> ${vehicle.location} | 
+                        <i class="fas fa-tachometer-alt"></i> ${vehicle.mileage} | 
+                        <i class="fas fa-calendar"></i> ${vehicle.date}
+                        ${vehicle.year ? `| <i class="fas fa-clock"></i> ${vehicle.year}` : ''}
+                    </div>
+                    ${vehicle.features.length > 0 ? `
+                        <div class="vehicle-features">
+                            ${vehicle.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                    <a href="${vehicle.link}" target="_blank" class="vehicle-link">
+                        <i class="fas fa-external-link-alt"></i> View on Riyasewana
+                    </a>
+                    <div style="font-size: 0.8em; color: #666; margin-top: 5px;">
+                        <i class="fas fa-list-ol"></i> ${index + 1}/${total}
+                    </div>
+                `;
+                
+                contentDiv.appendChild(vehicleCard);
+                this.vehicles.push(vehicle);
+                
+                const messagesContainer = document.getElementById('chatMessages');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            showSearchSummary(summary) {
+                if (!this.currentStreamMessage) return;
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                const summaryDiv = document.createElement('div');
+                summaryDiv.className = 'search-summary';
+                summaryDiv.innerHTML = `
+                    <strong><i class="fas fa-info-circle"></i> Search Summary:</strong><br>
+                    <i class="fas fa-car"></i> Total Vehicles: ${summary.totalVehicles}<br>
+                    ${summary.priceRange ? `<i class="fas fa-dollar-sign"></i> Price Range: LKR ${summary.priceRange.min.toLocaleString()} - LKR ${summary.priceRange.max.toLocaleString()}<br>` : ''}
+                    ${summary.averagePrice ? `<i class="fas fa-calculator"></i> Average Price: LKR ${summary.averagePrice.toLocaleString()}<br>` : ''}
+                    ${summary.bestValue ? `<i class="fas fa-trophy"></i> Best Value: ${summary.bestValue.title} (LKR ${summary.bestValue.numericPrice?.toLocaleString()})` : ''}
+                `;
+                contentDiv.appendChild(summaryDiv);
+            }
+
+            startRecommendationStream() {
+                this.removeTypingIndicator();
+                this.currentStreamMessage = this.createStreamMessage();
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                contentDiv.innerHTML = `
+                    <div class="recommendation-section">
+                        <h3><i class="fas fa-bullseye"></i> නිර්දේශ සකස් කරමින්...</h3>
+                        <p>ඔබගේ අවශ්‍යතා අනුව හොඳම වාහන නිර්දේශ සකස් කරමින්...</p>
+                    </div>
+                `;
+            }
+
+            updateRecommendationStream(text, isComplete) {
+                if (!this.currentStreamMessage) {
+                    this.currentStreamMessage = this.createStreamMessage();
+                }
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                contentDiv.innerHTML = `
+                    <div class="recommendation-section">
+                        <div class="markdown-content">${marked.parse(text)}</div>
+                    </div>
+                `;
+                
+                const messagesContainer = document.getElementById('chatMessages');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            startResponseStream() {
+                this.removeTypingIndicator();
+                this.currentStreamMessage = this.createStreamMessage();
+            }
+
+            updateResponseStream(text, isComplete) {
+                if (!this.currentStreamMessage) {
+                    this.currentStreamMessage = this.createStreamMessage();
+                }
+                
+                const contentDiv = this.currentStreamMessage.querySelector('.stream-content');
+                contentDiv.innerHTML = `<div class="markdown-content">${marked.parse(text)}</div>`;
+                
+                const messagesContainer = document.getElementById('chatMessages');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            completeStream() {
+                if (this.currentStreamMessage) {
+                    const statusDiv = this.currentStreamMessage.querySelector('.message-status');
+                    if (statusDiv) {
+                        statusDiv.innerHTML = '<i class="fas fa-check"></i> Processing complete';
+                    }
+                    this.currentStreamMessage.classList.remove('streaming-message');
+                    this.currentStreamMessage = null;
+                }
+                
+                this.saveToHistory();
+                document.getElementById('sendButton').disabled = false;
+                document.getElementById('messageInput').focus();
+            }
+
+            addMessage(content, type) {
+                const messagesContainer = document.getElementById('chatMessages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${type}-message`;
+                
+                if (type === 'user') {
+                    messageDiv.textContent = content;
+                } else {
+                    const markdownContent = document.createElement('div');
+                    markdownContent.className = 'markdown-content';
+                    markdownContent.innerHTML = marked.parse(content);
+                    messageDiv.appendChild(markdownContent);
+                }
+                
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            showError(error) {
+                this.addMessage(`<i class="fas fa-exclamation-triangle"></i> දෝෂය: ${error}`, 'ai');
+                this.completeStream();
+            }
+
+            updateConnectionStatus(status, text) {
+                const statusElement = document.getElementById('connectionStatus');
+                statusElement.className = `connection-status ${status}`;
+                statusElement.innerHTML = text;
+            }
+
+            async sendMessage(message) {
+                if (!this.isConnected || !this.clientId) {
+                    alert('Connection not established. Please wait...');
+                    return;
+                }
+
+                document.getElementById('sendButton').disabled = true;
+                this.vehicles = [];
+
+                try {
+                    const response = await fetch('/api/chat-stream', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            message: message,
+                            clientId: this.clientId
+                        })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to send message');
+                    }
+
+                } catch (error) {
+                    console.error('Error sending message:', error);
+                    this.showError('Message sending failed');
+                    document.getElementById('sendButton').disabled = false;
+                }
+            }
+
+            saveToHistory() {
+                if (!this.clientId) return;
+                
+                const history = JSON.parse(localStorage.getItem('riyasewana_chat_history') || '{}');
+                const currentMessages = Array.from(document.querySelectorAll('.message')).map(msg => ({
+                    content: msg.textContent || msg.innerHTML,
+                    type: msg.classList.contains('user-message') ? 'user' : 'ai',
+                    timestamp: new Date().toISOString()
+                }));
+                
+                history[this.clientId] = currentMessages.slice(-20);
+                localStorage.setItem('riyasewana_chat_history', JSON.stringify(history));
+            }
+
+            loadStoredHistory() {
+                const history = JSON.parse(localStorage.getItem('riyasewana_chat_history') || '{}');
+                console.log('Stored history:', history);
+            }
+
+            async loadChatHistory() {
+                if (!this.clientId) {
+                    alert('Please start a conversation first');
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`/api/chat-history/${this.clientId}`);
+                    const history = await response.json();
+                    
+                    const messagesContainer = document.getElementById('chatMessages');
+                    messagesContainer.innerHTML = '';
+                    
+                    history.forEach(item => {
+                        this.addMessage(item.message, item.type);
+                    });
+                    
+                } catch (error) {
+                    console.error('Error loading history:', error);
+                }
+            }
+
+            async clearChatHistory() {
+                if (!this.clientId) return;
+                
+                try {
+                    await fetch(`/api/chat-history/${this.clientId}`, { method: 'DELETE' });
+                    localStorage.removeItem('riyasewana_chat_history');
+                    
+                    const messagesContainer = document.getElementById('chatMessages');
+                    messagesContainer.innerHTML = '';
+                    
+                    this.addMessage('<i class="fas fa-check-circle"></i> Chat history cleared successfully!', 'ai');
+                    
+                } catch (error) {
+                    console.error('Error clearing history:', error);
+                }
+            }
+        }
+
+        let streamChat;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            streamChat = new EnhancedStreamChat();
+        });
+
+        function setExample(button) {
+            if (streamChat && !streamChat.isConnected) {
+                alert('Please wait for connection...');
+                return;
+            }
+            const text = button.textContent.trim();
+            document.getElementById('messageInput').value = text;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message || !streamChat) return;
+            
+            input.value = '';
+            streamChat.sendMessage(message);
+        }
+
+        function loadChatHistory() {
+            if (streamChat) {
+                streamChat.loadChatHistory();
+            }
+        }
+
+        function clearChatHistory() {
+            if (streamChat) {
+                streamChat.clearChatHistory();
+            }
+        }
+    </script>
+</body>
+</html>

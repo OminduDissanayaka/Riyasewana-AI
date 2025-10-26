@@ -1,0 +1,24 @@
+{
+  "name": "riyasewana-ai",
+  "version": "1.0.0",
+  "main": "ai-service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "marked": "^16.4.1",
+    "path": "^0.12.7",
+    "puppeteer": "^24.26.1",
+    "uuid": "^13.0.0"
+  }
+}

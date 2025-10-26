@@ -1,0 +1,42 @@
+[
+  {
+    "value": "Any",
+    "text": "Any Fuel",
+    "selected": true
+  },
+  {
+    "value": "petrol",
+    "text": "Petrol",
+    "selected": false
+  },
+  {
+    "value": "diesel",
+    "text": "Diesel",
+    "selected": false
+  },
+  {
+    "value": "electric",
+    "text": "Electric",
+    "selected": false
+  },
+  {
+    "value": "hybrid",
+    "text": "Hybrid",
+    "selected": false
+  },
+  {
+    "value": "gas",
+    "text": "Gas",
+    "selected": false
+  },
+  {
+    "value": "kick",
+    "text": "Kick",
+    "selected": false
+  },
+  {
+    "value": "electric",
+    "text": "Electric",
+    "selected": false
+  }
+]

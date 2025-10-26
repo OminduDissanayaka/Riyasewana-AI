@@ -1,0 +1,817 @@
+[
+  {
+    "label": "Colombo District",
+    "options": [
+      {
+        "value": "Colombo-district",
+        "text": "Colombo District",
+        "selected": false
+      },
+      {
+        "value": "Colombo",
+        "text": "Colombo",
+        "selected": false
+      },
+      {
+        "value": "Dehiwala-Mount-Lavinia",
+        "text": "Dehiwala-Mount-Lavinia",
+        "selected": false
+      },
+      {
+        "value": "Moratuwa",
+        "text": "Moratuwa",
+        "selected": false
+      },
+      {
+        "value": "Kotte",
+        "text": "Kotte",
+        "selected": false
+      },
+      {
+        "value": "Battaramulla",
+        "text": "Battaramulla",
+        "selected": false
+      },
+      {
+        "value": "Maharagama",
+        "text": "Maharagama",
+        "selected": false
+      },
+      {
+        "value": "Kotikawatta",
+        "text": "Kotikawatta",
+        "selected": false
+      },
+      {
+        "value": "Kolonnawa",
+        "text": "Kolonnawa",
+        "selected": false
+      },
+      {
+        "value": "Keselwatta",
+        "text": "Keselwatta",
+        "selected": false
+      },
+      {
+        "value": "Homagama",
+        "text": "Homagama",
+        "selected": false
+      },
+      {
+        "value": "Mulleriyawa",
+        "text": "Mulleriyawa",
+        "selected": false
+      },
+      {
+        "value": "Kesbewa",
+        "text": "Kesbewa",
+        "selected": false
+      },
+      {
+        "value": "Avissawella",
+        "text": "Avissawella",
+        "selected": false
+      },
+      {
+        "value": "Kaduwela",
+        "text": "Kaduwela",
+        "selected": false
+      },
+      {
+        "value": "Boralesgamuwa",
+        "text": "Boralesgamuwa",
+        "selected": false
+      },
+      {
+        "value": "Piliyandala",
+        "text": "Piliyandala",
+        "selected": false
+      },
+      {
+        "value": "Nugegoda",
+        "text": "Nugegoda",
+        "selected": false
+      },
+      {
+        "value": "Nawala",
+        "text": "Nawala",
+        "selected": false
+      },
+      {
+        "value": "Padukka",
+        "text": "Padukka",
+        "selected": false
+      },
+      {
+        "value": "Kottawa",
+        "text": "Kottawa",
+        "selected": false
+      },
+      {
+        "value": "Pannipitiya",
+        "text": "Pannipitiya",
+        "selected": false
+      },
+      {
+        "value": "Malabe",
+        "text": "Malabe",
+        "selected": false
+      },
+      {
+        "value": "Hanwella",
+        "text": "Hanwella",
+        "selected": false
+      },
+      {
+        "value": "Rajagiriya",
+        "text": "Rajagiriya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Gampaha District",
+    "options": [
+      {
+        "value": "Gampaha-district",
+        "text": "Gampaha District",
+        "selected": false
+      },
+      {
+        "value": "Gampaha",
+        "text": "Gampaha",
+        "selected": false
+      },
+      {
+        "value": "Negombo",
+        "text": "Negombo",
+        "selected": false
+      },
+      {
+        "value": "Katunayake",
+        "text": "Katunayake",
+        "selected": false
+      },
+      {
+        "value": "Hendala",
+        "text": "Hendala",
+        "selected": false
+      },
+      {
+        "value": "Welisara",
+        "text": "Welisara",
+        "selected": false
+      },
+      {
+        "value": "Ragama",
+        "text": "Ragama",
+        "selected": false
+      },
+      {
+        "value": "Kandana",
+        "text": "Kandana",
+        "selected": false
+      },
+      {
+        "value": "Ja-Ela",
+        "text": "Ja-Ela",
+        "selected": false
+      },
+      {
+        "value": "Wattala",
+        "text": "Wattala",
+        "selected": false
+      },
+      {
+        "value": "Kelaniya",
+        "text": "Kelaniya",
+        "selected": false
+      },
+      {
+        "value": "Peliyagoda",
+        "text": "Peliyagoda",
+        "selected": false
+      },
+      {
+        "value": "Minuwangoda",
+        "text": "Minuwangoda",
+        "selected": false
+      },
+      {
+        "value": "Kadawatha",
+        "text": "Kadawatha",
+        "selected": false
+      },
+      {
+        "value": "Dompe",
+        "text": "Dompe",
+        "selected": false
+      },
+      {
+        "value": "Divulapitiya",
+        "text": "Divulapitiya",
+        "selected": false
+      },
+      {
+        "value": "Nittambuwa",
+        "text": "Nittambuwa",
+        "selected": false
+      },
+      {
+        "value": "Mirigama",
+        "text": "Mirigama",
+        "selected": false
+      },
+      {
+        "value": "Kiribathgoda",
+        "text": "Kiribathgoda",
+        "selected": false
+      },
+      {
+        "value": "Veyangoda",
+        "text": "Veyangoda",
+        "selected": false
+      },
+      {
+        "value": "Ganemulla",
+        "text": "Ganemulla",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Kandy District",
+    "options": [
+      {
+        "value": "Kandy-district",
+        "text": "Kandy District",
+        "selected": false
+      },
+      {
+        "value": "Kandy",
+        "text": "Kandy",
+        "selected": false
+      },
+      {
+        "value": "Gampola",
+        "text": "Gampola",
+        "selected": false
+      },
+      {
+        "value": "Nawalapitiya",
+        "text": "Nawalapitiya",
+        "selected": false
+      },
+      {
+        "value": "Wattegama",
+        "text": "Wattegama",
+        "selected": false
+      },
+      {
+        "value": "Harispattuwa",
+        "text": "Harispattuwa",
+        "selected": false
+      },
+      {
+        "value": "Kadugannawa",
+        "text": "Kadugannawa",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Kurunegala District",
+    "options": [
+      {
+        "value": "Kurunegala-district",
+        "text": "Kurunegala District",
+        "selected": false
+      },
+      {
+        "value": "Kurunegala",
+        "text": "Kurunegala",
+        "selected": false
+      },
+      {
+        "value": "Kuliyapitiya",
+        "text": "Kuliyapitiya",
+        "selected": false
+      },
+      {
+        "value": "Polgahawela",
+        "text": "Polgahawela",
+        "selected": false
+      },
+      {
+        "value": "Pannala",
+        "text": "Pannala",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Ratnapura District",
+    "options": [
+      {
+        "value": "Ratnapura-district",
+        "text": "Ratnapura District",
+        "selected": false
+      },
+      {
+        "value": "Ratnapura",
+        "text": "Ratnapura",
+        "selected": false
+      },
+      {
+        "value": "Balangoda",
+        "text": "Balangoda",
+        "selected": false
+      },
+      {
+        "value": "Eheliyagoda",
+        "text": "Eheliyagoda",
+        "selected": false
+      },
+      {
+        "value": "Kalawana",
+        "text": "Kalawana",
+        "selected": false
+      },
+      {
+        "value": "Embilipitiya",
+        "text": "Embilipitiya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Kalutara District",
+    "options": [
+      {
+        "value": "Kalutara-district",
+        "text": "Kalutara District",
+        "selected": false
+      },
+      {
+        "value": "Kalutara",
+        "text": "Kalutara",
+        "selected": false
+      },
+      {
+        "value": "Beruwala",
+        "text": "Beruwala",
+        "selected": false
+      },
+      {
+        "value": "Panadura",
+        "text": "Panadura",
+        "selected": false
+      },
+      {
+        "value": "Horana",
+        "text": "Horana",
+        "selected": false
+      },
+      {
+        "value": "Matugama",
+        "text": "Matugama",
+        "selected": false
+      },
+      {
+        "value": "Bandaragama",
+        "text": "Bandaragama",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Puttalam District",
+    "options": [
+      {
+        "value": "Puttalam-district",
+        "text": "Puttalam District",
+        "selected": false
+      },
+      {
+        "value": "Puttalam",
+        "text": "Puttalam",
+        "selected": false
+      },
+      {
+        "value": "Chilaw",
+        "text": "Chilaw",
+        "selected": false
+      },
+      {
+        "value": "Nattandiya",
+        "text": "Nattandiya",
+        "selected": false
+      },
+      {
+        "value": "Wennappuwa",
+        "text": "Wennappuwa",
+        "selected": false
+      },
+      {
+        "value": "Marawila",
+        "text": "Marawila",
+        "selected": false
+      },
+      {
+        "value": "Dankotuwa",
+        "text": "Dankotuwa",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Kegalle District",
+    "options": [
+      {
+        "value": "Kegalle-district",
+        "text": "Kegalle District",
+        "selected": false
+      },
+      {
+        "value": "Kegalle",
+        "text": "Kegalle",
+        "selected": false
+      },
+      {
+        "value": "Mawanella",
+        "text": "Mawanella",
+        "selected": false
+      },
+      {
+        "value": "Warakapola",
+        "text": "Warakapola",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Matale District",
+    "options": [
+      {
+        "value": "Matale-district",
+        "text": "Matale District",
+        "selected": false
+      },
+      {
+        "value": "Matale",
+        "text": "Matale",
+        "selected": false
+      },
+      {
+        "value": "Dambulla",
+        "text": "Dambulla",
+        "selected": false
+      },
+      {
+        "value": "Sigiriya",
+        "text": "Sigiriya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Badulla District",
+    "options": [
+      {
+        "value": "Badulla-district",
+        "text": "Badulla District",
+        "selected": false
+      },
+      {
+        "value": "Badulla",
+        "text": "Badulla",
+        "selected": false
+      },
+      {
+        "value": "Bandarawela",
+        "text": "Bandarawela",
+        "selected": false
+      },
+      {
+        "value": "Haputale",
+        "text": "Haputale",
+        "selected": false
+      },
+      {
+        "value": "Welimada",
+        "text": "Welimada",
+        "selected": false
+      },
+      {
+        "value": "Mahiyanganaya",
+        "text": "Mahiyanganaya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Nuwara-Eliya District",
+    "options": [
+      {
+        "value": "Nuwara-Eliya-district",
+        "text": "Nuwara-Eliya District",
+        "selected": false
+      },
+      {
+        "value": "Nuwara-Eliya",
+        "text": "Nuwara-Eliya",
+        "selected": false
+      },
+      {
+        "value": "Hatton",
+        "text": "Hatton",
+        "selected": false
+      },
+      {
+        "value": "Talawakele",
+        "text": "Talawakele",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Galle District",
+    "options": [
+      {
+        "value": "Galle-district",
+        "text": "Galle District",
+        "selected": false
+      },
+      {
+        "value": "Galle",
+        "text": "Galle",
+        "selected": false
+      },
+      {
+        "value": "Ambalangoda",
+        "text": "Ambalangoda",
+        "selected": false
+      },
+      {
+        "value": "Bentota",
+        "text": "Bentota",
+        "selected": false
+      },
+      {
+        "value": "Hikkaduwa",
+        "text": "Hikkaduwa",
+        "selected": false
+      },
+      {
+        "value": "Elpitiya",
+        "text": "Elpitiya",
+        "selected": false
+      },
+      {
+        "value": "Koggala",
+        "text": "Koggala",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Matara District",
+    "options": [
+      {
+        "value": "Matara-district",
+        "text": "Matara District",
+        "selected": false
+      },
+      {
+        "value": "Matara",
+        "text": "Matara",
+        "selected": false
+      },
+      {
+        "value": "Weligama",
+        "text": "Weligama",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Hambantota District",
+    "options": [
+      {
+        "value": "Hambantota-district",
+        "text": "Hambantota District",
+        "selected": false
+      },
+      {
+        "value": "Hambantota",
+        "text": "Hambantota",
+        "selected": false
+      },
+      {
+        "value": "Tangalle",
+        "text": "Tangalle",
+        "selected": false
+      },
+      {
+        "value": "Middeniya",
+        "text": "Middeniya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Batticaloa District",
+    "options": [
+      {
+        "value": "Batticaloa-district",
+        "text": "Batticaloa District",
+        "selected": false
+      },
+      {
+        "value": "Batticaloa",
+        "text": "Batticaloa",
+        "selected": false
+      },
+      {
+        "value": "Kattankudy",
+        "text": "Kattankudy",
+        "selected": false
+      },
+      {
+        "value": "Eravur",
+        "text": "Eravur",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Ampara District",
+    "options": [
+      {
+        "value": "Ampara-district",
+        "text": "Ampara District",
+        "selected": false
+      },
+      {
+        "value": "Ampara",
+        "text": "Ampara",
+        "selected": false
+      },
+      {
+        "value": "Kalmunai",
+        "text": "Kalmunai",
+        "selected": false
+      },
+      {
+        "value": "Sammanthurai",
+        "text": "Sammanthurai",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Jaffna District",
+    "options": [
+      {
+        "value": "Jaffna-district",
+        "text": "Jaffna District",
+        "selected": false
+      },
+      {
+        "value": "Jaffna",
+        "text": "Jaffna",
+        "selected": false
+      },
+      {
+        "value": "Chavakacheri",
+        "text": "Chavakacheri",
+        "selected": false
+      },
+      {
+        "value": "Valvettithurai",
+        "text": "Valvettithurai",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Anuradapura District",
+    "options": [
+      {
+        "value": "Anuradapura-district",
+        "text": "Anuradapura District",
+        "selected": false
+      },
+      {
+        "value": "Anuradapura",
+        "text": "Anuradapura",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Polonnaruwa District",
+    "options": [
+      {
+        "value": "Polonnaruwa-district",
+        "text": "Polonnaruwa District",
+        "selected": false
+      },
+      {
+        "value": "Polonnaruwa",
+        "text": "Polonnaruwa",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Moneragala District",
+    "options": [
+      {
+        "value": "Moneragala-district",
+        "text": "Moneragala District",
+        "selected": false
+      },
+      {
+        "value": "Moneragala",
+        "text": "Moneragala",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Trincomalee District",
+    "options": [
+      {
+        "value": "Trincomalee-district",
+        "text": "Trincomalee District",
+        "selected": false
+      },
+      {
+        "value": "Trincomalee",
+        "text": "Trincomalee",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Mannar District",
+    "options": [
+      {
+        "value": "Mannar-district",
+        "text": "Mannar District",
+        "selected": false
+      },
+      {
+        "value": "Mannar",
+        "text": "Mannar",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Vavuniya District",
+    "options": [
+      {
+        "value": "Vavuniya-district",
+        "text": "Vavuniya District",
+        "selected": false
+      },
+      {
+        "value": "Vavuniya",
+        "text": "Vavuniya",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Kilinochchi District",
+    "options": [
+      {
+        "value": "Kilinochchi-district",
+        "text": "Kilinochchi District",
+        "selected": false
+      },
+      {
+        "value": "Kilinochchi",
+        "text": "Kilinochchi",
+        "selected": false
+      }
+    ]
+  },
+  {
+    "label": "Mullaitivu District",
+    "options": [
+      {
+        "value": "Mullaitivu-district",
+        "text": "Mullaitivu District",
+        "selected": false
+      },
+      {
+        "value": "Mullaitivu",
+        "text": "Mullaitivu",
+        "selected": false
+      }
+    ]
+  }
+]
