@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riyasewana AI - වාහන සෙවුම් සහ නිර්දේශ | Omindu Dissanayaka</title>
     
@@ -319,7 +319,6 @@
         
         .markdown-content img {
             max-width: 100%;
-            max-height: fit-content;
             height: auto;
             border-radius: 8px;
             margin: 10px 0;
@@ -527,6 +526,249 @@
             background: #2196F3 !important;
             border-color: #000 !important;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+                margin-bottom: 5px;
+            }
+
+            .header h1 i {
+                display: none;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .chat-container {
+                flex-direction: column;
+                height: calc(100vh - 180px);
+            }
+
+            .chat-sidebar {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                padding: 0;
+                border-right: none;
+                border-bottom: 2px solid #e0e0e0;
+                transition: max-height 0.3s ease, padding 0.3s ease;
+            }
+
+            .chat-sidebar.active {
+                max-height: 400px;
+                padding: 15px;
+                overflow-y: auto;
+            }
+
+            .chat-sidebar h3 {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                width: 100%;
+                padding: 12px;
+                background: #f5f5f5;
+                border: none;
+                border-bottom: 2px solid #e0e0e0;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 600;
+                color: #000;
+                text-align: left;
+            }
+
+            .mobile-menu-toggle i {
+                margin-right: 8px;
+                color: #2196F3;
+            }
+
+            .mobile-menu-toggle:active {
+                background: #e0e0e0;
+            }
+
+            .chat-main {
+                flex: 1;
+                min-height: 0;
+            }
+
+            .chat-messages {
+                padding: 15px 10px;
+            }
+
+            .message {
+                max-width: 90%;
+                padding: 12px;
+                font-size: 0.95em;
+            }
+
+            .vehicle-card {
+                padding: 12px;
+                margin: 8px 0;
+            }
+
+            .vehicle-image {
+                height: 150px;
+            }
+
+            .vehicle-title {
+                font-size: 1em;
+            }
+
+            .vehicle-price {
+                font-size: 1.2em;
+            }
+
+            .vehicle-details {
+                font-size: 0.85em;
+                line-height: 1.4;
+            }
+
+            .vehicle-link {
+                width: 100%;
+                text-align: center;
+                padding: 10px 16px;
+            }
+
+            .chat-input {
+                padding: 15px 10px;
+            }
+
+            .input-group {
+                gap: 8px;
+            }
+
+            .input-group input {
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+
+            .input-group button {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+
+            .input-group button span {
+                display: none;
+            }
+
+            .example-btn {
+                padding: 10px;
+                font-size: 0.85em;
+            }
+
+            .history-section {
+                padding-top: 15px;
+            }
+
+            .history-btn {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            .connection-status {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.75em;
+            }
+
+            .markdown-content h2 {
+                font-size: 1.3em;
+            }
+
+            .markdown-content h3 {
+                font-size: 1.1em;
+            }
+
+            .markdown-content ul, .markdown-content ol {
+                margin-left: 15px;
+            }
+
+            .search-summary {
+                font-size: 0.85em;
+                padding: 10px;
+            }
+
+            .recommendation-section {
+                padding: 12px;
+                margin: 12px 0;
+            }
+
+            .typing-indicator {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header p {
+                font-size: 0.9em;
+            }
+
+            .vehicle-card {
+                padding: 10px;
+            }
+
+            .vehicle-image {
+                height: 120px;
+            }
+
+            .vehicle-title {
+                font-size: 0.95em;
+            }
+
+            .vehicle-price {
+                font-size: 1.1em;
+            }
+
+            .vehicle-details {
+                font-size: 0.8em;
+            }
+
+            .feature-tag {
+                font-size: 0.7em;
+                padding: 2px 8px;
+            }
+
+            .message {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            .input-group input {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .input-group button {
+                padding: 10px 15px;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -542,7 +784,11 @@
         </div>
         
         <div class="chat-container">
-            <div class="chat-sidebar">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i> <span id="menuToggleText">Open Menu</span>
+            </button>
+            
+            <div class="chat-sidebar" id="chatSidebar">
                 <h3><i class="fas fa-lightbulb"></i> උදාහරණ ප්‍රශ්න</h3>
                 <div class="examples">
                     <button class="example-btn" onclick="setExample(this)">
@@ -581,9 +827,10 @@
                             <h2>සාදරයෙන් පිළිගනිමු!</h2>
                             <p>මම Riyasewana AI chat සහායකය. මම ඔබට:</p>
                             <ul>
-                                <li><i class="fas fa-search"></i> <strong>වාහන දත්ත</strong> - සැබෑ Riyasewana listings</li>
+                                <li><i class="fas fa-search"></i> <strong>වාහන දත්ත</strong> - Riyasewana listings</li>
                                 <li><i class="fas fa-image"></i> <strong>වාහන ඡායාරූප</strong> - Images සමග නිර්දේශ</li>
                                 <li><i class="fas fa-lightbulb"></i> <strong>විස්තරාත්මක නිර්දේශ</strong> - සවිස්තරාත්මක විශ්ලේෂණය</li>
+                            </ul>
                             <p>ඔබට අවශ්‍ය වාහනය ගැන මට කියන්න!</p>
                         </div>
                     </div>
@@ -593,7 +840,7 @@
                     <div class="input-group">
                         <input type="text" id="messageInput" placeholder="ඔබේ ප්‍රශ්නය ඇතුලත් කරන්න..." onkeypress="handleKeyPress(event)">
                         <button id="sendButton" onclick="sendMessage()">
-                            <i class="fas fa-paper-plane"></i> යවන්න
+                            <i class="fas fa-paper-plane"></i> <span>යවන්න</span>
                         </button>
                     </div>
                 </div>
@@ -1035,6 +1282,32 @@
         function clearChatHistory() {
             if (streamChat) {
                 streamChat.clearChatHistory();
+            }
+        }
+
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('chatSidebar');
+            const toggleText = document.getElementById('menuToggleText');
+            
+            sidebar.classList.toggle('active');
+            
+            if (sidebar.classList.contains('active')) {
+                toggleText.textContent = 'මෙනුව වසන්න';
+            } else {
+                toggleText.textContent = 'මෙනුව විවෘත කරන්න';
+            }
+        }
+
+        function setExample(button) {
+            if (streamChat && !streamChat.isConnected) {
+                alert('Please wait for connection...');
+                return;
+            }
+            const text = button.textContent.trim();
+            document.getElementById('messageInput').value = text;
+            
+            if (window.innerWidth <= 768) {
+                toggleMobileMenu();
             }
         }
     </script>
