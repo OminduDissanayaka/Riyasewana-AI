@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const marked = require('marked');
+const fs = require('fs');
+const https = require('https');
 const fixedScraper = require('./scraper');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
@@ -460,7 +462,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'fixed-chat.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Fixed Stream Chat Server running on http://localhost:${PORT}`);
-  console.log(`📊 Features: Real data scraping, Images, Recommendations, Chat History`);
+const httpsOptions = {
+  key: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/riyasewana-ai.omindu.dev.key'),
+  cert: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/fullchain.cer'),
+};
+
+
+https.createServer(httpsOptions, app).listen(443, () => {
+  console.log('✅ Riyasewana-AI running securely on https://riyasewana-ai.omindu.dev');
 });
+
