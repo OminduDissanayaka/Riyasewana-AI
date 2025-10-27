@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "ai-service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "pm2 start server.js --deep-monitoring --attach --name RIYASEWANA_AI",
+    "stop": "pm2 stop RIYASEWANA_AI",
+    "restart": "pm2 restart RIYASEWANA_AI"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "express": "^5.1.0",
     "marked": "^16.4.1",
     "path": "^0.12.7",
+    "pm2": "^6.0.13",
     "puppeteer": "^24.26.1",
     "uuid": "^13.0.0"
   }
