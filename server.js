@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Initialize Gemini AI
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyDw8gTqM0D35yWs_fhPSJRnvPsK7GvYNTo");
 const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
 // Configure marked for better image handling
@@ -471,4 +471,5 @@ const httpsOptions = {
 https.createServer(httpsOptions, app).listen(443, () => {
   console.log('✅ Riyasewana-AI running securely on https://riyasewana-ai.omindu.dev');
 });
+
 
