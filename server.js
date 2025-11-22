@@ -462,14 +462,19 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'fixed-chat.html'));
 });
 
-const httpsOptions = {
-  key: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/riyasewana-ai.omindu.dev.key'),
-  cert: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/fullchain.cer'),
-};
+// const httpsOptions = {
+//   key: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/riyasewana-ai.omindu.dev.key'),
+//   cert: fs.readFileSync('/root/.acme.sh/riyasewana-ai.omindu.dev_ecc/fullchain.cer'),
+// };
 
 
-https.createServer(httpsOptions, app).listen(443, () => {
-  console.log('✅ Riyasewana-AI running securely on https://riyasewana-ai.omindu.dev');
+// https.createServer(httpsOptions, app).listen(443, () => {
+//   console.log('✅ Riyasewana-AI running securely on https://riyasewana-ai.omindu.dev');
+// });
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server started on port ${PORT}`);
 });
+
 
 
